@@ -15,27 +15,18 @@ const Projects = () => {
       featured: true
     },
     {
-      title: 'Weather App',
-      description: 'Real-time weather application with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop',
-      technologies: ['React', 'API Integration', 'Charts.js'],
-      githubUrl: 'https://github.com',
-      liveUrl: 'https://example.com',
-      featured: true
-    },
-    {
-      title: 'Task Management Tool',
-      description: 'Collaborative project management application with real-time updates, team collaboration features, and progress tracking.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      technologies: ['React', 'Firebase', 'Material-UI'],
-      githubUrl: 'https://github.com',
+      title: 'Skin Disease Detection',
+      description: 'Integrating Depthwise separable CNN model to detect skin diseases.',
+      image: '/assets/th (1).jpeg',
+      technologies: ['Python', 'TensorFlow', 'Keras', 'MobileNetV2'],
+      githubUrl: 'https://github.com/Nayan-Adhikari/Skin-Disease-Detection',
       liveUrl: 'https://example.com',
       featured: true
     },
     {
       title: 'Air Quality Index Prediction',
       description: 'Predictive analytics model for air quality index with data visualization and insights dashboard.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      image: '/assets/th.jpeg',
       technologies: ['Python', 'TensorFlow', 'Pandas', 'XgBoost', 'Random Forest'],
       githubUrl: 'https://github.com/Nayan-Adhikari/Air-Quality-Index',
       liveUrl: 'https://example.com',

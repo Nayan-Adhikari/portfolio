@@ -46,27 +46,26 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'nayan.adhikari@email.com',
-      link: 'mailto:nayan.adhikari@email.com'
+      details: 'nayanadhikari1507@email.com',
+      link: 'mailto:nayanadhikari1507@email.com'
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: '+91 98765 43210',
-      link: 'tel:+919876543210'
+      details: '+91 97335 54648',
+      link: 'tel:+919733554648'
     },
     {
       icon: MapPin,
       title: 'Location',
-      details: 'Mumbai, Maharashtra, India',
+      details: 'Tamluk, West Bengal, India',
       link: 'https://maps.google.com'
     }
   ];
 
   const socialLinks = [
-    { icon: Github, url: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Twitter, url: 'https://twitter.com', label: 'Twitter' }
+    { icon: Github, url: 'https://github.com/Nayan-Adhikari', label: 'GitHub' },
+    { icon: Linkedin, url: 'https://www.linkedin.com/in/nayan-adhikari/', label: 'LinkedIn' },
   ];
 
   return (
