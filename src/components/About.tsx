@@ -17,7 +17,7 @@ const About = () => {
             <div className="w-80 h-80 mx-auto lg:mx-0 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 p-1">
               <div className="w-full h-full rounded-2xl bg-white dark:bg-gray-800 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="/assets/WhatsApp Image 2025-06-16 at 23.56.48_cc08e2cb.jpg"
                   alt="Nayan Adhikari"
                   className="w-full h-full object-cover rounded-xl"
                 />
@@ -70,7 +70,7 @@ const About = () => {
             <div className="pt-4">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Quick Facts</h4>
               <div className="space-y-2 text-gray-600 dark:text-gray-400">
-                <p>📍 Location: India</p>
+                <p>📍 Location: Tamluk, India</p>
                 <p>🎓 Final Year Engineering Student</p>
                 <p>💼 Open to internships and collaborations</p>
                 <p>🚀 Always learning and growing</p>

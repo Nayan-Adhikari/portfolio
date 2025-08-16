@@ -3,7 +3,7 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 const Blog = () => {
   const blogPosts = [
-    {
+    /*{
       id: 1,
       title: 'Building Scalable React Applications with Modern Architecture',
       excerpt: 'Discover the best practices for structuring large-scale React applications with proper state management and component architecture.',
@@ -11,52 +11,7 @@ const Blog = () => {
       readTime: '8 min read',
       category: 'React',
       image: '/placeholder.svg'
-    },
-    {
-      id: 2,
-      title: 'The Future of Web Development: Trends to Watch in 2024',
-      excerpt: 'Exploring the latest trends in web development including AI integration, serverless architecture, and progressive web apps.',
-      date: '2024-01-10',
-      readTime: '6 min read',
-      category: 'Web Development',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 3,
-      title: 'Machine Learning in Frontend Development',
-      excerpt: 'How machine learning is revolutionizing user experience and interface design in modern web applications.',
-      date: '2024-01-05',
-      readTime: '10 min read',
-      category: 'Machine Learning',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 4,
-      title: 'Optimizing Performance in Next.js Applications',
-      excerpt: 'Advanced techniques for improving loading times and user experience in Next.js applications.',
-      date: '2023-12-28',
-      readTime: '7 min read',
-      category: 'Performance',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 5,
-      title: 'Design Systems: Building Consistency at Scale',
-      excerpt: 'Creating and maintaining design systems that scale across multiple products and teams.',
-      date: '2023-12-20',
-      readTime: '9 min read',
-      category: 'Design',
-      image: '/placeholder.svg'
-    },
-    {
-      id: 6,
-      title: 'Getting Started with TypeScript in React Projects',
-      excerpt: 'A comprehensive guide to integrating TypeScript into your React workflow for better code quality.',
-      date: '2023-12-15',
-      readTime: '12 min read',
-      category: 'TypeScript',
-      image: '/placeholder.svg'
-    }
+    }*/
   ];
 
   const categories = ['All', 'React', 'Web Development', 'Machine Learning', 'Performance', 'Design', 'TypeScript'];

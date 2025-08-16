@@ -6,15 +6,6 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: 'Certify Hub',
-      description: 'A full-stack website to store and validate your certificate.',
-      image: '/assets/WhatsApp Image 2025-03-03 at 15.36.49_994b5b66.jpg',
-      technologies: ['React', 'vite', 'Spring Boot', 'MySQL', 'Spring Data JPA', 'Rest APIs', 'JWT', 'RBAC'],
-      githubUrl: 'https://github.com/Nayan-Adhikari/CertifyHub',
-      liveUrl: 'https://example.com',
-      featured: true
-    },
-    {
       title: 'Skin Disease Detection',
       description: 'Integrating Depthwise separable CNN model to detect skin diseases.',
       image: '/assets/th (1).jpeg',
@@ -93,24 +84,15 @@ const Projects = () => {
                   )}
                 </div>
 
-                <div className="flex space-x-2 mt-auto">
+                <div className="mt-auto">
                   <a 
                     href={project.githubUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-md border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-colors flex-1 justify-center"
+                    className="w-full inline-flex items-center justify-center px-3 py-1.5 text-xs font-medium rounded-md border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900 transition-colors"
                   >
                     <Github className="mr-1.5" size={12} />
-                    Code
-                  </a>
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-md bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-colors flex-1 justify-center"
-                  >
-                    <ExternalLink className="mr-1.5" size={12} />
-                    Live Demo
+                    View Code
                   </a>
                 </div>
               </div>

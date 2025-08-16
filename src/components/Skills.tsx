@@ -25,7 +25,6 @@ const Skills = () => {
   ];
 
   const additionalSkills = [
-    { icon: Globe, name: 'Backend Development', description: 'Spring Boot, Servelet, Hibernate, JSP' },
     { icon: Cpu, name: 'Machine Learning', description: 'TensorFlow, Scikit-learn, ML Algorithms' },
     { icon: Cpu, name: 'Data Analysis', description: 'Pandas, NumPy, Matplotlib, Seaborn, Power BI, Excel' }
   ];

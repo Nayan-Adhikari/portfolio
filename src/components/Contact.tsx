@@ -1,46 +1,9 @@
 
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   const contactInfo = [
     {
@@ -59,7 +22,7 @@ const Contact = () => {
       icon: MapPin,
       title: 'Location',
       details: 'Tamluk, West Bengal, India',
-      link: 'https://maps.google.com'
+      link: 'https://maps.app.goo.gl/Swh9SmXKi6qWgKMy9'
     }
   ];
 
@@ -67,6 +30,8 @@ const Contact = () => {
     { icon: Github, url: 'https://github.com/Nayan-Adhikari', label: 'GitHub' },
     { icon: Linkedin, url: 'https://www.linkedin.com/in/nayan-adhikari/', label: 'LinkedIn' },
   ];
+
+
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -82,36 +47,39 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Contact Information */}
-          <div className="lg:col-span-1">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg h-fit">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Let's Connect
-              </h3>
-              
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
-                    href={info.link}
-                    className="flex items-start space-x-4 group hover:bg-gray-50 dark:hover:bg-gray-800 p-3 rounded-lg transition-colors"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <info.icon className="text-white" size={20} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {info.title}
-                      </h4>
-                      <p className="text-gray-600 dark:text-gray-400">{info.details}</p>
-                    </div>
-                  </a>
-                ))}
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6">Contact Information</h3>
+                <div className="space-y-6">
+                  {contactInfo.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start group"
+                    >
+                      <div className="flex-shrink-0 bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full text-blue-600 dark:text-blue-400">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="text-sm font-medium text-gray-900 dark:text-white">{item.title}</h4>
+                        <p className="mt-1 text-sm text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                          {item.details}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-
-              <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
+              
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-6">Let's Connect</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  Feel free to reach out to me through any of the contact methods listed here. I'm always open to interesting conversations and opportunities.
+                </p>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <a
@@ -119,99 +87,14 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-110"
+                      className="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors p-2 rounded-full bg-gray-100 dark:bg-gray-700"
                       aria-label={social.label}
                     >
-                      <social.icon size={18} />
+                      <social.icon className="h-6 w-6" />
                     </a>
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="lg:col-span-2">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Send Me a Message
-              </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Full Name *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Your full name"
-                      className="w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Email Address *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="your@email.com"
-                      className="w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Subject *
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="What's this about?"
-                    className="w-full dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message *
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell me about your project or just say hello..."
-                    rows={6}
-                    className="w-full resize-none dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
-                  />
-                </div>
-
-                <Button 
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
-                  <Send className="mr-2" size={20} />
-                  Send Message
-                </Button>
-              </form>
             </div>
           </div>
         </div>

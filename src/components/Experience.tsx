@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { Briefcase, Award, Calendar, MapPin, Trophy, Star } from 'lucide-react';
+import { Briefcase, Award, Calendar, MapPin, Trophy, Star, Code } from 'lucide-react';
 
 const Experience = () => {
   const [inView, setInView] = useState(false);
@@ -28,6 +28,12 @@ const Experience = () => {
       year: '2022-2023'
     },
     {
+      icon: Star,
+      title: 'GATE Qualified',
+      description: 'Qualified in GATE exam with the rank of 6780 and GATE score is 373',
+      year: '2025'
+    },
+    {
       icon: Trophy,
       title: 'Hackathon Runner-up',
       description: 'Third place in Intra College hackathon',
@@ -35,16 +41,11 @@ const Experience = () => {
     },
     {
       icon: Trophy,
-      title: 'Winner - Inter Departmental Cricket Tournament',
-      description: 'Secured 1st place in Inter Departmental Cricket Tournament',
-      year: '2024,2025'
-    },
-    {
-      icon: Trophy,
-      title: 'Winner - Inter Departmental Football Tournament',
-      description: 'Secured 1st place in Inter Departmental Football Tournament',
-      year: '2023,2024,2025'
+      title: 'Hackathon Finalist',
+      description: 'Finalist of "Secure Code Hackathon" among West Bengal',
+      year: '2025'
     }
+    
   ];
 
   useEffect(() => {
